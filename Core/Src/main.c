@@ -101,7 +101,7 @@ int main(void)
     /* USER CODE BEGIN 3 */
 	  while (HAL_ADC_PollForConversion(&hadc1, 100)!= HAL_OK){}
 	  adc_val = HAL_ADC_GetValue(&hadc1);
-	  if(adc_val > 4444){
+	  if(adc_val > 4000){
 		  HAL_GPIO_WritePin(PI11_OUT_GPIO_Port, PI11_OUT_Pin, SET);
 		  HAL_GPIO_WritePin(PI15_OUT_GPIO_Port, PI15_OUT_Pin, SET);
 		  HAL_GPIO_WritePin(PI18_OUT_GPIO_Port, PI18_OUT_Pin, SET);
